@@ -17,7 +17,7 @@ class Solution {
 		//交换左右子树
 		root.left = right;
 		root.right = left;
-        return root;
+       		return root;
 	}
     public TreeNode invertTree(TreeNode root) {
 		return robot(root);
