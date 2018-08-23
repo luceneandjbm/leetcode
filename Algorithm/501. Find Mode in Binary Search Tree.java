@@ -8,6 +8,7 @@
  * }
  */
 class Solution {
+	//进阶解法参考https://leetcode.com/problems/find-mode-in-binary-search-tree/discuss/98101/Proper-O(1)-space
 	public Map<Integer,Integer> map = new HashMap<>();
 	int max = 0;
 	public void robot(TreeNode root){
