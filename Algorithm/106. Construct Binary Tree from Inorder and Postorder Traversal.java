@@ -20,6 +20,8 @@ class Solution {
 		TreeNode root = new TreeNode(postorder[post_ed]);
 		root.left = buildTree(inorder,in_st,in_st+left_len-1,postorder,post_st,post_st+left_len-1);
 		root.right = buildTree(inorder,i+1,in_ed,postorder,post_st+left_len,post_ed-1);
+// 		root.left = buildTree(inorder,in_st,i-1,postorder,post_st,post_st+len-1);或者这样
+// 		root.right = buildTree(inorder,i+1,in_ed,postorder,post_st+len,post_ed-1);
 		return root;
 	}
     public TreeNode buildTree(int[] inorder, int[] postorder) {
