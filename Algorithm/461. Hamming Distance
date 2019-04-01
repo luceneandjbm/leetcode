@@ -1,0 +1,13 @@
+class Solution {
+    //x^y 得到的数就是我们要的结果，所以想办法找到其中的1
+    public int hammingDistance(int x, int y) {
+        int n = x^y;
+		int count = 0;
+		for(int i = 0; i < 32; i ++){
+			count += (n>>i) & 1;
+		}
+		return count;
+    }
+}
+
+

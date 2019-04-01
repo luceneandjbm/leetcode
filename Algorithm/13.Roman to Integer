@@ -1,0 +1,26 @@
+class Solution {
+    public int romanToInt(String s) {
+        int ans = 0;
+        char pre = 'A';
+        for(char c : s.toCharArray()) {
+            switch(c) {
+                    case 'V' : ans += pre == 'I'? 3 : 5;
+                                 break;
+                    case 'X' : ans += pre == 'I'? 8 : 10;
+                                 break;
+                    case 'L' : ans += pre == 'X'? 30 : 50;
+                                 break;
+                    case 'C' : ans += pre == 'X'? 80 : 100;
+                                 break;
+                    case 'D' : ans += pre == 'C'? 300 : 500;
+                                 break;
+                    case 'M' : ans += pre == 'C'? 800 : 1000;
+                                 break;
+                    case 'I' : ans += 1;
+                                 break;
+            }
+            pre = c;
+        }
+        return ans;
+    }
+}
